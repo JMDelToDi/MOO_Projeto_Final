@@ -1,87 +1,81 @@
+//------------------------------------------------------------//
+//                      MOO - Projeto Final                   //
+//------------------------------------------------------------//
+//                           Grupo 8                          //
+//                                                            //
+// Antônio Sebastian Fernandes Rabelo - NUSP 10797781         //
+// João Marcos Della Torre Divino - NUSP 10377708             //
+// Paulo Inay Cruz - NUSP 10388691                            //
+// Samuel Libardi Godoy - NUSP 9805891                        //
+// Vitor Oliveira Caires - NUSP 10748027                      //
+// Vinícius Molina Garcia - NUSP 8929296                      //
+//------------------------------------------------------------//
+
 package Pinta;
 
-
-/**
-* @generated
-*/
 public class Pinta {
     
-    /**
-    * @generated
-    */
+    //------------------------------------------------------------//
+    //                          Atributos                         //
+    //------------------------------------------------------------//
     private String apelido;
-    
-    /**
-    * @generated
-    */
     private Double risco_atual;
-    
-    
-    /**
-    * @generated
-    */
     private Set fotos = new HashSet();
+    //------------------------------------------------------------//
+
     
-    /**
-    * @generated
-    */
+    //------------------------------------------------------------//
+    //                      Setters e getters                     //
+    //------------------------------------------------------------//
     private String getApelido() {
         return this.apelido;
     }
     
-    /**
-    * @generated
-    */
     private String setApelido(String apelido) {
         this.apelido = apelido;
     }
     
-    /**
-    * @generated
-    */
     private Double getRisco_atual() {
         return this.risco_atual;
     }
     
-    /**
-    * @generated
-    */
     private Double setRisco_atual(Double risco_atual) {
         this.risco_atual = risco_atual;
     }
 
-    public Set getFotos() {
-        return Collection.unmodifiableSet(fotos);
-    }
+    //------------------------------------------------------------//
+    //               Codigos proprios adicionados                 //
+    //------------------------------------------------------------//
+    public Set getFotos() {                                       //
+        return Collection.unmodifiableSet(fotos);                 //
+    }                                                             //
+                                                                  //
+    public Pinta adicionarFoto(Foto foto) {                       //
+        this.fotos.add(foto);                                     //
+    }                                                             //
+                                                                  //
+    public void removerFoto(Foto foto) {                          //
+        this.fotos.remove(foto);                                  //
+    }                                                             //
+    //------------------------------------------------------------//
     
-    public Pinta adicionarFoto(Foto foto) {
-        this.fotos.add(foto);
-    }
+    //------------------------------------------------------------//
 
-    public void removerFoto(Foto foto) {
-        this.fotos.remove(foto);
-    }
     
-
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
+    //------------------------------------------------------------//
+    //                          Operations                        //
+    //------------------------------------------------------------//
     public void criarTendencia() {
         //TODO
     }
-    /**
-    * @generated
-    */
+
     public Foto criarFoto(File fotoPNG) {
         //TODO
     }
-    /**
-    * @generated
-    */
+
     public Set listarFotos() {
         //TODO
     }
+    //------------------------------------------------------------//
     
 }
